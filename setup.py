@@ -5,12 +5,12 @@ from setuptools import setup
 # https://docs.python.org/3/distutils/setupscript.html
 setup(
     name='forcity-trasherbot',
-    version='0.1.0',
+    version='1.0.0',
     license='None',
     description='',
     author='Lionel Atty',
     author_email='yoyonel@hotmail.com',
-    url='',
+    url='https://github.com/yoyonel/forcity_trasherbot.git',
     packages=['forcity.{}'.format(x) for x in find_packages('src/forcity')],
     package_dir={'': 'src'},
     # package_data={},
@@ -32,6 +32,10 @@ setup(
 
     ],
     install_requires=[
+        "bresenham==0.2",
+        "dataclasses==0.6",
+        "jsonschema==2.6.0",
+        "numpy==1.15.4",
     ],
     extras_require={},
     entry_points={
