@@ -1,0 +1,26 @@
+{
+  "map": {
+    "x_max": 10,
+    "y_max": 6,
+    "max_range": 4,
+    "max_rounds": 50
+  },
+  "bot": {
+    "x_pos": 1,
+    "y_pos": 1
+  },
+  "trash": [
+    {
+      "x_pos": 4,
+      "y_pos": 5
+    },
+    {
+      "x_pos": 10,
+      "y_pos": 1
+    },
+    {
+      "x_pos": 10,
+      "y_pos": 3
+    }
+  ]
+}
