@@ -33,7 +33,7 @@ def process(args) -> int:
     for sig in SIGNALS:
         signal.signal(sig, _signal_handler)
 
-    return simulate(args.json_config)
+    return simulate(args.json_config, args.show_map_at_each_round)
 
 
 def return_result(result: int):
@@ -65,7 +65,11 @@ def build_parser(parser=None, **argparse_options):
                         type=argparse.FileType('r'),
                         help=f"Path to json configuration {argparse_default}",
                         )
-
+    #
+    parser.add_argument("--show_map_at_each_round",
+                        action="store_true", default=False,
+                        help="Debug - Show map at each round (trashes & bot positions)")
+    #
     parser.add_argument("-v", "--verbose",
                         action="store_true", default=False,
                         help="increase output verbosity (enable 'DEBUG' level log)")
