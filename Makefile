@@ -66,6 +66,9 @@ fclean:
 pytest:
 	pytest ${PYTEST_OPTIONS}
 
+pytest_coverage:
+	pytest ${PYTEST_OPTIONS} --cov=src/ tests/
+
 tox:
 	# http://ahmetdal.org/jenkins-tox-shebang-problem/
 	tox --workdir ${TOX_DIR}
