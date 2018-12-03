@@ -69,6 +69,10 @@ pytest:
 pytest_coverage:
 	pytest ${PYTEST_OPTIONS} --cov=src/ tests/
 
+pytest_coverage_html:
+	pytest ${PYTEST_OPTIONS} --cov=src/ tests/ --cov-report html
+	
+
 tox:
 	# http://ahmetdal.org/jenkins-tox-shebang-problem/
 	tox --workdir ${TOX_DIR}
