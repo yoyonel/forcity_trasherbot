@@ -8,12 +8,11 @@ from forcity.trasherbot.model.board import Board
 from forcity.trasherbot.tools.load_config import load_config
 from forcity.trasherbot.tools.debug import debug_show_board
 
-
 logger = logging.getLogger('forcity.trasherbot.simulator')
 
 
 def simulate(json_config: TextIO,
-             show_map_at_each_round: bool=False) -> int:
+             show_map_at_each_round: bool = False) -> int:
     """
 
     :param json_config:
@@ -29,7 +28,7 @@ def simulate(json_config: TextIO,
 
     # ~ Game Loop
     i_round = 1
-    for i_round in range(1, board.field.max_rounds+1):
+    for i_round in range(1, board.field.max_rounds + 1):
         if show_map_at_each_round:
             logger.debug("\n" + str(debug_show_board(board)))
 
