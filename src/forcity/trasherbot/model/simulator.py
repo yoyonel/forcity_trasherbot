@@ -26,7 +26,7 @@ def simulate(json_config: TextIO) -> int:
 
     # ~ Game Loop
     i_round = 1
-    for i_round in range(1, board.field.max_rounds+1):
+    for i_round in range(1, board.field.max_rounds + 1):
         state = f"Round {i_round}/{board.field.max_rounds}"
 
         closest_trash = board.find_closest_trash()

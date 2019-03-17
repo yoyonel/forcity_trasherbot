@@ -27,8 +27,8 @@ def test_position_ndarray_indices(test_datas_json_config):
 
 def test_addition_positions(test_datas_json_config):
     position = get_bot_position(test_datas_json_config)
-    double_position = Position(x_pos=test_datas_json_config['bot']['x_pos']*2,
-                               y_pos=test_datas_json_config['bot']['y_pos']*2)
+    double_position = Position(x_pos=test_datas_json_config['bot']['x_pos'] * 2,
+                               y_pos=test_datas_json_config['bot']['y_pos'] * 2)
     # __add__
     assert position + position == double_position
     # __radd__
@@ -53,4 +53,4 @@ def test_distance(test_datas_json_config):
     position = get_bot_position(test_datas_json_config)
     # distance
     assert position.distance() == (
-            abs(test_datas_json_config['bot']['x_pos']) + abs(test_datas_json_config['bot']['y_pos']))
+        abs(test_datas_json_config['bot']['x_pos']) + abs(test_datas_json_config['bot']['y_pos']))

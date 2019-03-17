@@ -8,8 +8,8 @@ import sys
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
-        format='%(funcName)s - %(levelname)s - %(message)s',
-    )
+    format='%(funcName)s - %(levelname)s - %(message)s',
+)
 
 
 @pytest.fixture(autouse=True)
